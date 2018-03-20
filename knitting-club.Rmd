@@ -391,3 +391,4 @@ You don't necessarily *need* to know what's going on under the hood, but I'll te
 * More about Knitr upfront
 * table formatting with kable()
 * execute other coding languages in chunks?
+* test git push from bash vs rstudio terminal
