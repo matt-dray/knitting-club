@@ -52,7 +52,7 @@ R Markdown documents allow you to manipulate data and create documents *in the s
 # Process
 
 I'm going to follow the steps in [version 1 of the RStudio R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/R Markdown-cheatsheet.pdf) because they provide a sensible introduction and logical steps to R Markdown creation. Note that [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/R Markdown-cheatsheet-2.0.pdf) contains a little more information and there's some more specific help on syntax in the
-[reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf). The most in-depth source of information is probably the [RStudio R Markdown website](https://R Markdown.rstudio.com/).
+[reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf) and if you go to Help > RMarkdown Quick Reference in RStudio. The most in-depth source of information is probably the [RStudio R Markdown website](https://R Markdown.rstudio.com/).
 
 What's the overview for creating an R Markdown document? Basically you're going to write a script that contains your report *and* the code needed for generating values, plots, tables, etc. All in one place.
 
@@ -391,4 +391,4 @@ You don't necessarily *need* to know what's going on under the hood, but I'll te
 * More about Knitr upfront
 * table formatting with kable()
 * execute other coding languages in chunks?
-* test git push from bash vs rstudio terminal
+* test git push from bash vs rstudio terminal - take 2
