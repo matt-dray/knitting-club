@@ -1,1 +1,0 @@
-Text file to test pushing to GitHub from alternate source.
