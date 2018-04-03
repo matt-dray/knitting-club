@@ -17,19 +17,24 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE)
+library(emo)
 ```
 
 <img src="img/consultancy-cup_mon-aguilar_noun_110144_cc.png" alt="CC BY 3.0, Consultancy Cup icon by Mon Aguilar from thenounproject.com" width="200"><img src="img/yarn-ball_andrejs-kirma_noun_871187_cc.png" alt="CC BY 3.0, Yarn Ball icon by Andres Kirma from thenounproject.com" width="200">
 
 # Intro
 
+## Blurb
+
+>Do you have *woolly* knowledge of document creation in R? *Needle* little help? Matt Dray will *drop* some *purls* of wisdom and unravel a *yarn* about the *knitty*-gritty of R Markdown and the ‘knitr’ package for one-click document creation. Don’t get the *point*? If a deadline is *looming*, you’ll avoid a *stitch*-up from endless re-running of code and copy-pasting of outputs into a Word document. Come along and have a *ball*!
+
 ## TL;DR
 
 We should make reproducible reports using R Markdown documents. This puts our analysis and commentary in the same place and makes it easier to avoid error, recreate documents with new parameters and generally speed up our work.
 
-## Blurb
+## Disclaimer
 
->Do you have *woolly* knowledge of document creation in R? *Needle* little help? Matt Dray will *drop* some *purls* of wisdom and unravel a *yarn* about the *knitty*-gritty of R Markdown and the ‘knitr’ package for one-click document creation. Don’t get the *point*? If a deadline is *looming*, you’ll avoid a *stitch*-up from endless re-running of code and copy-pasting of outputs into a Word document. Come along and have a *ball*!
+This is not an exhaustive guide. It's purely to introduce and demonstrate the basic workings of R Markdown and how to turn it into a document for sharing. Let me know if you want a section added or want to find out more about something.
 
 ## Why?
 
@@ -234,9 +239,9 @@ legend(
 )
 ```
 
-In other words you'll get the output table as you wanted, but the code itself will also print out.
+In other words you'll get the plot as you wanted, but the *code itself* will also print out, which is a default behaviour.
 
-Okay, but we probably don't want the code to be exposed to the reader; it's the output we care about. We can fix this with chunk options.
+In general we probably don't want the code to be exposed to the reader, especially if this is a report for non-specialists. We can fix this with chunk options.
 
 ### Chunk options
 
@@ -352,7 +357,9 @@ quakes %>%
 
 ## How
 
-To actually render your R Markdown into an output file, you click the 'knit' button above the script pane (i.e. the area in RStudio where you write your code, which is the top-left pane by default). The button has an icon showing a yarn ball and knitting needles.
+To actually render your R Markdown into an output file, you click the 'knit' button above the script pane (i.e. the area in RStudio where you write your code, which is the top-left pane by default). The button has an icon showing a yarn ball and knitting needles:
+
+<img src="img/knitbutton.png" alt="Knit button">
 
 A tab called 'R Markdown' will open in the console pane (i.e. the area where your code is sent to be executed, the bottom-left pane by default) once the button is clicked and you'll see information here about the rendering process. You'll see:
 
@@ -384,9 +391,21 @@ In the YAML header, set the output to `output: word_document`. (Note that this w
 
 Now when you press 'Knit' you'll get a .docx in your working directory instead of a .html.
 
-Remember that interactive elements won't render in a Word document. You'll also have those pesky page breaks to deal with.
+Word is a good format for the following reason:
 
-# Prettification
+* everyone knows how to use it
+* you can easily add comments
+* ???
+
+It sucks because:
+
+* you can't embed interactives
+* your document will get page breaks, but you only really need these if the document is being printed out -- something we're encouraged *not* to do
+* it's not an open format (though you can create text documents in [OpenDocument](https://en.wikipedia.org/wiki/OpenDocument) format (.odt))
+
+# Basic prettification
+
+The default styles for both HTML and Word are fine, but we can make them better.
 
 ## HTML
 
@@ -415,27 +434,44 @@ Here's what these options mean:
 
 | Option | What it does | Example option |
 | :- | :------------------------------ | :------------------------- |
-| `theme` | Changes appearance of typeface, header colours, etc | `cerulean` is simple and blue |
-| `highlight` | syntax highighting (colours your code) | `tango` distinguishes code elements clearly |
-| `number_sections` | Automatically add consecutive and nested numbers to your sections | `yes` to add them |
+| [`theme`](https://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style) | Changes appearance of typeface, header colours, etc | `cerulean` is simple and blue |
+| [`highlight`](https://rmarkdown.rstudio.com/html_document_format.html#appearance_and_style) | syntax highighting (colours your code) | `tango` distinguishes code elements clearly |
+| [`number_sections`](https://rmarkdown.rstudio.com/html_document_format.html#section_numbering) | Automatically add consecutive and nested numbers to your sections | `yes` to add them |
 | [`toc`](https://rmarkdown.rstudio.com/html_document_format.html#table_of_contents) | <u>T</u>able <u>o</u>f <u>c</u>ontents | `yes` to have this put at the top of your document |
-| `toc_depth` | Subsections to be shown in the table of contents to specified level | `3` will show to third-level subsections in form 1.2.3 |
+| [`toc_depth`](https://rmarkdown.rstudio.com/html_document_format.html#table_of_contents) | Subsections to be shown in the table of contents to specified level | `3` will show to third-level subsections in form 1.2.3 |
 | [`toc_float`](https://rmarkdown.rstudio.com/html_document_format.html#table_of_contents) | Controls whether the table of contents is always available, even as you scroll | `yes` for it to remain visible even as you scroll |
 
-https://cran.r-project.org/web/packages/prettydoc/vignettes/architect.html
 
-These options are pretty limited.
+You can have finer control over document style and output options of your document by looking at the [advanced R Markdown customization section](https://rmarkdown.rstudio.com/html_document_format.html#advanced_customization) of the RStudio site and by providing [custom CSS](https://rmarkdown.rstudio.com/html_document_format.html#custom_css). Knitr also supports [LaTeX](https://www.latex-project.org/about/) for precise typesetting (Yihui Xie, author of the `knitr` package,  [blogged about this](https://yihui.name/en/2013/10/markdown-or-latex/)).
 
-You can have finer control over the style of your document by providing [custom CSS](https://rmarkdown.rstudio.com/html_document_format.html#custom_css).
 
 ## Word
 
+We can make the output Word document match our corporate templates to conform to style guides, create consistency and leave our colleagues none the wiser.
+
+An in-depth explanation can be found on the [Happy collaboration with Rmd to docx](https://rmarkdown.rstudio.com/articles_docx.html) page. Briefly, you:
+
+* use R Markdown to create a Word document
+* edit the Word styles you find there
+* save this document as your style reference docx file
+* format an Rmd report using the styles reference docx file
+
+So you basically have your Word output document referring to a separate Word document that contains your style information.
 
 # Other output formats
 
-Presentations (adam's example), Flexdashboard, Bookdown, Shiny, Websites, R Notebooks, crosstalk
+I've focused here on HTML 'report-style' outputs, but there are many other options.
 
-LaTex
+For example, you can use RMarkdown to create:
+
+* presentations with [ioslides](https://rmarkdown.rstudio.com/ioslides_presentation_format.html), [beamer](https://rmarkdown.rstudio.com/beamer_presentation_format.html) and others
+* dashboards with [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html)
+* interactive documents with [Shiny](https://rmarkdown.rstudio.com/authoring_shiny.html) and [Crosstalk](https://rstudio.github.io/crosstalk/)
+* coding notebooks with [R Notebooks](https://rmarkdown.rstudio.com/r_notebooks.html)
+* books (!) with [Bookdown](https://bookdown.org/)
+* and even websites with [Blogdown](https://bookdown.org/yihui/blogdown/) (!)
+
+A full list of options is available from the [RMarkdown pages of the RStudio website](https://rmarkdown.rstudio.com/formats.html).
 
 # Links
 
@@ -445,13 +481,3 @@ LaTex
 * [Cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/R Markdown-cheatsheet-2.0.pdf)
 * [Reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf)
 * [Gallery](https://R Markdown.rstudio.com/gallery.html)
-* [Notebooks](https://R Markdown.rstudio.com/r_notebooks.html)
-
-
-***
-
-<mark>TODO</mark>
-
-* Other output formats: Presentations, Flexdashboard, Bookdown, Shiny, Websites, R Notebooks, crosstalk
-* table formatting with kable()
-* tabbed sections
