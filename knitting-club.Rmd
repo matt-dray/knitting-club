@@ -493,12 +493,11 @@ A full list of options is available from the [RMarkdown pages of the RStudio web
 * [Reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf)
 * [Gallery](https://R Markdown.rstudio.com/gallery.html)
 
-## Attribution
+## Images
 
 * Consultancy Cup by Mon Aguilar, CC BY 3.0 from https://thenounproject.com/
 * Yarn ball by Andrejs Kirma, CC BY 3.0 from https://thenounproject.com/
 * R Markdown 'how it works' by RStudio from https://rmarkdown.rstudio.com/lesson-2.html
-* CC 0, Markdown logo by Dustin Curtis from https://github.com/dcurtis/markdown-mark
-* Llama gif from http://mochimochiland.com/wp-content/uploads/alpaca-kiss-gif-e1518124321500.gif via https://giphy.com/
+* Markdown logo by Dustin Curtis, CC 0 from https://github.com/dcurtis/markdown-mark
 * Knitting simulator from https://makezine.com/2014/09/19/knitting-simulator-2014/ via https://giphy.com/
-* Screenshots of RStudio by the author
+* Llama gif from http://mochimochiland.com/wp-content/uploads/alpaca-kiss-gif-e1518124321500.gif via https://giphy.com/
