@@ -140,7 +140,7 @@ Here is an example of *italic text* and **bold text**.
 And an unordered list:
 
 * this item is an equation: $A = \pi*r^{2}$ 
-* this is a [hyperlink](https://https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+* this is a [hyperlink](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 * this is ^superscript^
 
 There's way more options than shown here. For example, you can set headers with hash marks (\#), using one hash for a top header, then two, then three, etc. See the [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) and [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) for a lot more examples.
