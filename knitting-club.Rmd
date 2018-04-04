@@ -61,8 +61,8 @@ First, this is how not to do it:
 ![](https://media.giphy.com/media/O1QfB9a2ruGEE/giphy.gif)
 
 <br>
-I'm going to follow the steps in [version 1 of the RStudio R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/R Markdown-cheatsheet.pdf) because they provide a sensible introduction and logical steps to R Markdown creation. Note that [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/R Markdown-cheatsheet-2.0.pdf) contains a little more information and there's some more specific help on syntax in the
-[reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf) and if you go to Help > RMarkdown Quick Reference in RStudio. The most in-depth source of information is probably the [RStudio R Markdown website](https://R Markdown.rstudio.com/).
+I'm going to follow the steps in [version 1 of the RStudio R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) because they provide a sensible introduction and logical steps to R Markdown creation. Note that [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) contains a little more information and there's some more specific help on syntax in the
+[reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) and if you go to Help > RMarkdown Quick Reference in RStudio. The most in-depth source of information is probably the [RStudio R Markdown website](https://rmarkdown.rstudio.com/).
 
 What's the overview for creating an R Markdown document? Basically you're going to write a script that contains your report *and* the code needed for generating values, plots, tables, etc. *All in one place*.
 
@@ -143,7 +143,7 @@ And an unordered list:
 * this is a [hyperlink](https://https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 * this is ^superscript^
 
-There's way more options than shown here. For example, you can set headers with hash marks (\#), using one hash for a top header, then two, then three, etc. See the [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf) and [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/R Markdown-cheatsheet-2.0.pdf) for a lot more examples.
+There's way more options than shown here. For example, you can set headers with hash marks (\#), using one hash for a top header, then two, then three, etc. See the [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) and [cheat sheet version 2](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) for a lot more examples.
 
 As an aside, note that your R Markdown is ultimately knitted into an HTML document, so you can write valid HTML alongisde -- or instead of -- R Markdown. You can do this directly using HTML tags, e.g. <code>\<b>bold\</b></code> is rendered as <b>bold</b>. Sometimes HTML offers more flexibility, for example the <code>\<img></code> tag in HTML contains some arguments for height and width, whereas the analagous code in R Markdown does not. There's plenty of online help for writing HTML, including the [W3Schools](https://www.w3schools.com/html/) website.
 
@@ -155,7 +155,7 @@ Some of that is self-explanatory. `title:`, `author:` and `date:` for example. B
 
 HTML was the default output when we created our new R Markdown document -- you can see this in the YAML header as `output: html_document`. This means that when we've knitted our document it will be saved with the .html extension and will open by default as a webpage in a browser. There's a number of reasons whey you might want HTML: you want everything to appear in line without pages breaks, you want some nice elements like the floating table of contents you can see to the left of this document, or maybe you've embedded something interactive (we'll chat about this later).
 
-We'll focus here on HTML but will consider Word outputs too. In-depth detail on other output formats can be found on the [RStudio R Markdown website](https://R Markdown.rstudio.com/lesson-9.html).
+We'll focus here on HTML but will consider Word outputs too. In-depth detail on other output formats can be found on the [RStudio R Markdown website](https://rmarkdown.rstudio.com/lesson-9.html).
 
 ## Embed code
 
@@ -280,7 +280,7 @@ legend(
 
 You can add additional arguments within the curly braces and separated by commas. For example, you may want to prevent the printing of warnings and messages that come with code evaluation (such as the conflict warnings you get when loading `library(tidyverse)` for example), so you would type something like `{r chunk_name, echo=FALSE, warning=FALSE, message=FALSE}`.
 
-A full list of chunk options is available in the [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf).
+A full list of chunk options is available in the [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf).
 
 ### Setup chunk
 
@@ -486,12 +486,12 @@ A full list of options is available from the [RMarkdown pages of the RStudio web
 
 ## R Markdown stuff
 
-* [R Markdown home](https://R Markdown.rstudio.com/)
-* [Introduction](https://R Markdown.rstudio.com/articles_intro.html) by Garrett Grolemund
-* [Quick tour](https://R Markdown.rstudio.com/authoring_quick_tour.html)
-* [Cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/R Markdown-cheatsheet-2.0.pdf)
-* [Reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/R Markdown-reference.pdf)
-* [Gallery](https://R Markdown.rstudio.com/gallery.html)
+* [R Markdown home](https://rmarkdown.rstudio.com/)
+* [Introduction](https://rmarkdown.rstudio.com/articles_intro.html) by Garrett Grolemund
+* [Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html)
+* [Cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+* [Reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+* [Gallery](https://rmarkdown.rstudio.com/gallery.html)
 
 ## Images
 
