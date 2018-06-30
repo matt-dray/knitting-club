@@ -1,4 +1,4 @@
-# Knitting Club
+# knitting-club
 
 Beginner's guide: What is R Markdown and why do you need it?
 
@@ -8,4 +8,4 @@ Live version here: https://matt-dray.github.io/knitting-club/
 
 Delivered 7 April 2018 at a departmental Coffee & Coding session.
 
-Work in progress.
+If this document is too long, see [this shorter slide-based introduction](https://matt-dray.github.io/quick-rmd/) to R Markdown, with code available in the [quick-rmd repo](https://github.com/matt-dray/quick-rmd)
