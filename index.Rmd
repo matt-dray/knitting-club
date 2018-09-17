@@ -4,13 +4,9 @@ subtitle: "What is R Markdown and why do you need it?"
 author: "Matt Dray"
 date: "Last update: 17 Sep 2018"
 output:
-  html_document:
-    theme: cerulean
+  rmdformats::readthedown:
     highlight: tango
-    number_sections: yes
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
+    number_sections: true
 ---
 
 ```{r setup, include=FALSE}
@@ -31,16 +27,20 @@ You should make reproducible reports using R Markdown documents. Put all your pr
 * [R Markdown cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 * Syntax help is in the
 [reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) and if you go to Help > Markdown Quick Reference in RStudio
-* The [RStudio R Markdown website](https://rmarkdown.rstudio.com/) contains [lessons](https://rmarkdown.rstudio.com/lesson-1.html), a [gallery of possibilities](https://rmarkdown.rstudio.com/gallery.html) and [a number of other articles](https://rmarkdown.rstudio.com/articles.html)
+* *R Markdown: The Definitve Guide* by Yihui Xie, JJ Allaire and Garrett Grolemund](https://bookdown.org/yihui/rmarkdown/)
+* The [RStudio R Markdown website](https://rmarkdown.rstudio.com/)
 
 # Intro
 
 ## Purpose
 
-This document was originally used in a Coffee & Coding session in a public-sector organisation.
-The blurb:
+The document was intended originally for analysts in a specific public-sector organisation. It was presented at a Coffee & Coding session with the blurb:
 
 >Do you have *woolly* knowledge of document creation in R? *Needle* little help? Matt Dray will *drop* some *purls* of wisdom and unravel a *yarn* about the *knitty*-gritty of R Markdown and the ‘knitr’ package for one-click document creation. Don’t get the *point*? If a deadline is *looming*, you’ll avoid a *stitch*-up from endless re-running of code and copy-pasting of outputs into a Word document. Come along and have a *ball*!
+
+It's specifically about creation of reports and doesn't cover presentations, websites, books, dashboards and blogs, [which can all be made using R Markdown](https://rmarkdown.rstudio.com/gallery.html).
+
+For an in-depth understanding of R Markdown and its uses, [see *R Markdown: The Definitve Guide* by Yihui Xie, JJ Allaire and Garrett Grolemund](https://bookdown.org/yihui/rmarkdown/), which was [published by Chapman & Hall/CRC](https://www.crcpress.com/R-Markdown-The-Definitive-Guide/Xie-Allaire-Grolemund/p/book/9781138359338) and is available for free online. 
 
 ## What's the problem?
 
@@ -478,19 +478,18 @@ A full list of options is available from the [RMarkdown pages of the RStudio web
 
 # Links and attributions
 
-## R Markdown stuff
+## Links
 
 * [R Markdown home](https://rmarkdown.rstudio.com/)
-* [Introduction](https://rmarkdown.rstudio.com/articles_intro.html) by Garrett Grolemund
-* [Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html)
+* [*R Markdown: The Definitve Guide* by Yihui Xie, JJ Allaire and Garrett Grolemund](https://bookdown.org/yihui/rmarkdown/)
 * [Cheat sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 * [Reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 * [Gallery](https://rmarkdown.rstudio.com/gallery.html)
+* [Introduction](https://rmarkdown.rstudio.com/articles_intro.html) by Garrett Grolemund
+* [Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html)
 
 ## Images
 
-* Consultancy Cup by Mon Aguilar, CC BY 3.0 from https://thenounproject.com/
-* Yarn ball by Andrejs Kirma, CC BY 3.0 from https://thenounproject.com/
 * R Markdown 'how it works' by RStudio from https://rmarkdown.rstudio.com/lesson-2.html
 * Markdown logo by Dustin Curtis, CC 0 from https://github.com/dcurtis/markdown-mark
 * Knitting simulator from https://makezine.com/2014/09/19/knitting-simulator-2014/ via https://giphy.com/
